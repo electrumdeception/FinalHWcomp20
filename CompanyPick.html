@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta charset="utf-8">
+<title>Company Sort</title>
+<link href="StockStyle.css" type="text/css" rel="stylesheet">
+</head>
+	
+<!-- Create an HTML file with a form that asks the user to enter a stock ticker OR a company name.  Form suggestions:  do this with two separate input boxes - or one input box with a radio button to select the type of input.  The form action should be directed to a Node.js app that displays the name and stock ticker for the company identified using the form data.   Several company names may share the same stock ticker. If the user types in the stock ticker, all matching company names must be displayed.-->
+<body>
+	<h1>Stock Market Search Tool</h1>
+	<h3>Look up a company by its ticker or vice versa</h3>
+	<form method = "get" action = "http://localhost:8080">
+		<label>Company or Ticker</label><br>
+		<label>company:</label>
+		<input type="radio" value ="comp" name = "cOrT">
+		<label>ticker:</label>
+		<input type = "radio" value = "tick" name = "cOrT"><br>
+		
+		<label>Search Term:</label>
+		<input type = "text" name= "x"> 
+		
+		<input type = "submit" value = "submit">
+	</form>																			
+</body>
+</html>
