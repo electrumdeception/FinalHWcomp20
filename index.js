@@ -4,7 +4,10 @@ var url = require('url');
 const MongoClient = require('mongodb').MongoClient;
 const mongoUrl = "mongodb+srv://pharrington:potatopotato@cluster0.tjx7u.mongodb.net/?retryWrites=true&w=majority";
 client =new MongoClient(mongoUrl,{ useUnifiedTopology: true });
-
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 
 http.createServer(function (req, res){
 	res.writeHead(200, {'Content-Type': 'text/html'});
@@ -81,7 +84,8 @@ var result = "";
 		});  //end find	
 
 
-//res.end();
-}).listen(8080);
+;
+
+}).app.listen(port);
 
 
